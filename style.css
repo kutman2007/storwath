@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    position: absolute;
+}
+.tic{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.tic p{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    z-index: 9999;
+    font-size: 48px;
+    margin-bottom: 120px;
+}
+.tic p::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(40, 41, 42);
+    z-index: -1;
+    border-radius: 50%;
+    left: -10%;
+    top: -131%;
+    animation-name: tac;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes tac {
+    0% ,100%{
+        box-shadow: 0px 0px 32x -12px rgb(197, 194, 197);
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px rgb(197, 194, 197);
+    }  
+}
+button{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(30, 30, 33);
+    padding: 10px 38px;
+    border:  1px solid rgb(20, 18, 18);
+    border-radius: 28px;
+    color: #fff;
+    transition: all .2s ease;
+    outline: 0;
+    font-size: 20px;
+   
+}
+button:not(:last-child){
+   margin-top: 10px;
+}
+button:hover,
+button:focus
+{
+    border-color: rgb(197, 194, 197);
+    color: rgb(196, 189, 202);
+    box-shadow: 0px 4px 27px -12px rgb(194, 194, 203);
+}
+.btn-stop{
+    margin-top: 10px;
+}
+.btn-reset{
+    margin-top: 10px;
+}
